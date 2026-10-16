@@ -35,9 +35,9 @@ The owner dashboard, English/German AI chat, n8n workflows and production securi
 - After the schema/test additions, `npm test` (2 passed), `npm run typecheck`, `npm run lint`, `npm run build`, and `node --check scripts/test-booking-race.mjs` all passed.
 - The repeatable Node race script has not been run because a server-only key has not been provisioned locally; the equivalent two-request race was run directly through the authenticated database connector and verified.
 
-### Remaining blockers
+### Remaining blockers at the end of phase 2
 
-- The GitHub connector has no repository-creation action. The browser fallback reached Google sign-in for GitHub; after the user-selected Google method, the website rejected the submitted password. No further password attempt was made. A secure manual sign-in handoff is needed before creating the private GitHub repository and pushing the local commits.
+- At that point, GitHub sign-in blocked repository creation. A signed-in session became available later; the private repository and code commit are recorded in Phase 4 below.
 - Public booking UI/API, service-derived appointment durations, opening-hours availability, owner authentication/dashboard, bilingual chatbot, n8n workflows, automated data retention and production security review are still ahead.
 
 ## Phase 3 — public booking form and server-validated booking API
@@ -55,5 +55,8 @@ The owner dashboard, English/German AI chat, n8n workflows and production securi
 
 ### Remaining blockers
 
-- GitHub private repository creation and push await the user completing GitHub sign-in in the preserved browser tab.
 - Production use still requires deployment-grade rate limiting/abuse controls, customer notice and retention policy, email/SMS confirmation design, owner dashboard/auth, bilingual chatbot, n8n workflows, full E2E runs and a security review.
+
+## Phase 4 — private GitHub repository
+
+**Status: complete.** Created private repository `ayanirfan099/vienna-ai-business-platform` and verified the `main` branch contains the structured Next.js application, booking API, migrations, SQL tests, and progress/architecture docs. GitHub commit `afbd907` contains the working homepage and secure booking foundation; no secret values or customer data were committed.
