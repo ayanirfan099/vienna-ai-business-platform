@@ -2,6 +2,21 @@
 
 Reusable, multi-business website and automation starter for Vienna local businesses. The first demo tenant is **FORM & FADE**, a fictional barber atelier in Vienna's 7th district.
 
+[![CI](https://github.com/ayanirfan099/vienna-ai-business-platform/actions/workflows/ci.yml/badge.svg)](https://github.com/ayanirfan099/vienna-ai-business-platform/actions/workflows/ci.yml)
+
+## Implementation status
+
+| Area | Current state | Evidence / remaining work |
+| --- | --- | --- |
+| Fictional tenant landing page | Implemented | Next.js pages and business configuration |
+| Tenant-scoped catalog and booking | Implemented code; backend configuration required | API routes, Supabase migrations and SQL constraint tests |
+| Overlap prevention | Database constraint provided | SQL and race tests require a disposable configured database |
+| Reusable tenant administration | Incomplete | No demonstrated owner-facing tenant management workflow |
+| Owner authentication/dashboard | Planned | Not a production access-control system |
+| Chatbot and n8n automation | Planned | No completed chatbot or exported automation claimed |
+| Email/SMS and retention automation | Planned | No delivery or deletion guarantee |
+| Production security and abuse controls | Pending | Do not expose booking publicly before review |
+
 ## First milestone
 
 - Premium, responsive German-language landing page with a real booking form for the fictional demo business.
@@ -13,7 +28,7 @@ Reusable, multi-business website and automation starter for Vienna local busines
 ## Run locally
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
