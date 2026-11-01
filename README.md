@@ -1,4 +1,4 @@
-# Vienna AI Business Platform
+# Vienna Business Platform — Booking & Automation Starter
 
 Reusable, multi-business website and automation starter for Vienna local businesses. The first demo tenant is **FORM & FADE**, a fictional barber atelier in Vienna's 7th district.
 
